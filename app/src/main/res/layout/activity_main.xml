@@ -1,31 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_gravity="center"
+    android:background="#038BC34A"
+    android:fadingEdge="vertical"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/busnum"
-        android:text="Bus No.: "
-        android:textSize="25dp"/>
 
     <Button
+        android:id="@+id/scanqr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="51dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/des1"
+        android:fontFamily="@font/volkhov_bold_italic"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
         android:text="Scan QR Code"
-        android:id="@+id/scanqr"/>
+        android:textColor="@color/color1"
+        android:textSize="25sp"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/lastamount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/busnum" />
 
     <TextView
+        android:id="@+id/busnum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="250dp"
+        android:background="#2E64FE"
+        android:elegantTextHeight="true"
+        android:fontFamily="@font/amaranth_italic"
+        android:text="Bus No. : "
+        android:textColor="@color/color1"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/scanqr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/lastamount"
-        android:text="Amount Last Received: "/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="346dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="148dp"
+
+        android:background="#00BFFF"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/courgette"
+        android:text="Amount Last Received: "
+        android:textSize="30sp"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanqr" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

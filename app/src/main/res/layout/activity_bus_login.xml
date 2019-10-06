@@ -1,21 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".BusLogin">
+
     <EditText
+        android:id="@+id/busno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="312dp"
+        android:background="#A4A4A4"
+        android:fontFamily="@font/volkhov_bold_italic"
         android:hint="Enter Bus No."
-        android:id="@+id/busno"
-        />
+        android:textSize="30dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/busreg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
+        android:id="@+id/busreg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="280dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="46dp"
+        android:paddingEnd="15dp"
+        android:paddingStart="15dp"
+        android:background="@drawable/des1"
+        android:fontFamily="@font/galindo"
+        android:onClick="busreg"
         android:text="Go Ahead"
-        android:id="@+id/busreg"
-        android:onClick="busreg"/>
-</LinearLayout>
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/busno" />
+</androidx.constraintlayout.widget.ConstraintLayout>
