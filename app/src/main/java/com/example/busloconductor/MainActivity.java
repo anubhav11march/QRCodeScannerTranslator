@@ -144,24 +144,31 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         Log.v("AAA", "onlocationchangedcalled " + lat+" "+lon);
         if(lat >28.713 && lat<28.714 && lon > 77.136 && lon < 137){
             notification(bundle.getString("busno") + " Bus is near Prashant Vihar");
+            mref.child("status").setValue("near Prashant Vihar");
         }
-        else if(lat >28.703 && lat<28.707 && lon > 77.126 && lon < 131){
+        else if(lat >28.707 && lat<28.714 && lon > 77.126 && lon < 131){
             notification(bundle.getString("busno") + " Bus is near District Court Subway");
+            mref.child("status").setValue("near District Court Subway");
         }
         else if(lat >28.698 && lat<28.703 && lon > 77.128 && lon < 133){
             notification(bundle.getString("busno") + " Bus is near Madhuban Chowk");
+            mref.child("status").setValue("near Madhuban Chowk");
         }
         else if(lat >28.703 && lat<28.707 && lon > 77.126 && lon < 131){
             notification(bundle.getString("busno") + " Bus is near Kohat Enclave");
+            mref.child("status").setValue("near Kohat Enclave");
         }
         else if(lat >28.703 && lat<28.706 && lon > 77.135 && lon < 139){
             notification(bundle.getString("busno") + " Bus is near Pitampura");
+            mref.child("status").setValue("near Pitampura");
         }
         else if(lat >28.692 && lat<28.696 && lon > 77.141 && lon < 145){
             notification(bundle.getString("busno") + " Bus is near ND Block");
+            mref.child("status").setValue("near ND Block");
         }
         else if(lat >28.691 && lat<28.695 && lon > 77.147 && lon < 151){
             notification(bundle.getString("busno") + " Bus is near Netaji Subhash Place");
+            mref.child("status").setValue("near Netaji Subhash Place");
         }
 
     }
