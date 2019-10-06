@@ -16,6 +16,7 @@ import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.Toast;
@@ -74,8 +75,7 @@ import java.io.IOException;
         @Override
         public void onDetectedQrCode(Barcode barcode) {
             if (barcode != null) {
-                Intent intent = new Intent();
-                intent.putExtra(BarcodeObject, barcode);
+                Intent intent = new Intent().putExtra(BarcodeObject, barcode);
                 setResult(CommonStatusCodes.SUCCESS, intent);
                 finish();
             }
