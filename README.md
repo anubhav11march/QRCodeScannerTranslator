@@ -1,3 +1,2 @@
 # QRCodeScannerTranslator
 
-Made by Saurabh
